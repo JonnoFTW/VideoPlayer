@@ -43,7 +43,7 @@ public class Main extends Application {
         File currentDir = new File(jarDir);
         System.out.println("Loading from "+currentDir.getAbsolutePath());
         for(File f : currentDir.listFiles()) {
-            if (f.isFile() && f.getAbsolutePath().matches(".*\\.(mov|avi|mp4)")) {
+            if (f.isFile() && f.getAbsolutePath().toLowerCase().matches(".*\\.(mp4|m4a|m4v|flv|fxm)")) {
                 mMovieFiles.add(f);
                 System.out.println("Adding: "+f.getAbsolutePath());
             }
@@ -52,7 +52,7 @@ public class Main extends Application {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("pVideoPlayer Error");
             alert.setHeaderText("Fatal Error!");
-            alert.setContentText("You need to place VideoPlayer.jar file in a folder\n that contains .mov, .avi or .mp4 files");
+            alert.setContentText("You need to place VideoPlayer.jar file in a folder\n that contains .mp4 or flv files");
             alert.showAndWait();
             return false;
         }
