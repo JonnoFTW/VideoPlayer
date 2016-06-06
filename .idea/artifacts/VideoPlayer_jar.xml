@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="VideoPlayer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/VideoPlayer_jar</output-path>
+    <root id="archive" name="VideoPlayer.jar">
+      <element id="module-output" name="VideoPlayer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-collections4-4.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
